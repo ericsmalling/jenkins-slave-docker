@@ -11,3 +11,6 @@ run apt-get -q update &&\
     pip install -q docker-compose &&\
     apt-get -q -y autoremove &&\
     apt-get -q clean -y && rm -rf /var/lib/apt/lists/* && rm -f /var/cache/apt/*.bin
+    
+# Default command
+CMD ["sudo /usr/sbin/sshd", "-D"]
