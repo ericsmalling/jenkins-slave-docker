@@ -8,7 +8,7 @@ run apt-get -q update &&\
     apt-get -q update &&\
     DEBIAN_FRONTEND="noninteractive" apt-get -q upgrade -y -o Dpkg::Options::="--force-confnew" --no-install-recommends &&\
     DEBIAN_FRONTEND="noninteractive" apt-get -q install -y -o Dpkg::Options::="--force-confnew"  --no-install-recommends docker-engine python-pip git-core curl &&\
-    pip install -q docker-compose &&\
+    pip install -q docker-compose==1.7.1 &&\
     apt-get -q -y autoremove &&\
     apt-get -q clean -y && rm -rf /var/lib/apt/lists/* && rm -f /var/cache/apt/*.bin
     
